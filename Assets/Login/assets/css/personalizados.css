@@ -1,0 +1,53 @@
+.detailsh {
+    width: 100%; /* Ajusta según tus necesidades */
+    overflow: hidden; /* Oculta el desbordamiento */
+    white-space: nowrap; /* Evita el salto de línea */
+}
+
+.detailsh h3 {
+    font-size: 64px; /* Tamaño de fuente muy grande */
+    font-weight: bold; /* Negrita */
+    font-family: Verdana, Geneva, sans-serif;
+    animation: desplazar 10s linear infinite, cambiarColor 5s linear infinite; /* Ajusta la duración y la velocidad de desplazamiento según tus necesidades */
+    color: #8B0000; /* Color rojo oscuro en formato hexadecimal */
+}
+
+@keyframes desplazar {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes cambiarColor {
+    0% {
+        color: #8B0000; /* Rojo oscuro */
+    }
+    50% {
+        color: #000080; /* Azul marino */
+    }
+    100% {
+        color: #8B0000; /* Rojo oscuro */
+    }
+}
+
+
+@keyframes bounceFromTop {
+    0% {
+        transform: translateY(-100px) rotateX(-60deg);
+    }
+    70% {
+        transform: translateY(20px) rotateX(20deg);
+    }
+    100% {
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+.help {
+    animation: bounceFromTop 7s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards, 
+               rotate 4s linear infinite; /* Define ambas animaciones */
+}
+
